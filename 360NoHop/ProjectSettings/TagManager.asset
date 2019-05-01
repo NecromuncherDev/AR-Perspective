@@ -8,6 +8,7 @@ TagManager:
   - RubixCollider
   - HeadCollider
   - BlockShadow
+  - Environment
   layers:
   - Default
   - TransparentFX

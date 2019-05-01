@@ -36,9 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
-        Debug.LogWarning(col.transform.tag);
-
-        if (col.transform.CompareTag(landingColliderTag))
+        if (col.transform.CompareTag("BlockShadow"))
         {
             ResetPlayerPosition();
         }
