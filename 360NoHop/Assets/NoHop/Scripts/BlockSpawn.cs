@@ -31,7 +31,7 @@ public class BlockSpawn : MonoBehaviour
         float change = Mathf.Atan2(platform.transform.position.z , platform.transform.position.x);
         change = change * (180 / Mathf.PI);
         Debug.LogWarning(change+" x:"+platform.transform.position.x+" y:"+ platform.transform.position.z); 
-        //platform.transform.Rotate(0,change, 0);
+       
         platform.transform.Rotate(0,-change, 0);
     }
 
