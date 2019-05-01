@@ -24,7 +24,7 @@ public class BlockSpawn : MonoBehaviour
 
 
 
-    private void SpawnEnemy()
+    public void SpawnEnemy()
     {
         var platform = Instantiate(Platform, transform);
         platform.transform.position = GetRandomPosition();
@@ -45,4 +45,5 @@ public class BlockSpawn : MonoBehaviour
         return _center + point;
     }
 
+   
 }
