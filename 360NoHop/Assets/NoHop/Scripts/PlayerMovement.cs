@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public int livesLeft = 3;
     public string landingColliderTag = "BlockShadow";
+    public GameObject arBasePicture;
 
     Vector3 speed = new Vector3(0, 0.01f, 0);
     Vector3 startingPos = new Vector3(0, 1, 0);
@@ -39,6 +40,8 @@ public class PlayerMovement : MonoBehaviour
         if (col.transform.CompareTag("BlockShadow"))
         {
             ResetPlayerPosition();
+            Destroy(col.transform.parent.gameObject);
+            arBasePicture.GetComponent<BlockSpawn>().SpawnEnemy();
         }
     }
 

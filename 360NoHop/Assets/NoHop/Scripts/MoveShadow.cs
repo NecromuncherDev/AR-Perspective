@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class MoveShadow : MonoBehaviour
 {
-    [SerializeField] Transform headPosision;
-
+    Transform cameraTransform;
+    float yRotation;
 
     private void Update()
     {
-        headPosision = Camera.main.transform;
-        transform.GetComponent<Collider>().transform.SetPositionAndRotation(transform.position, headPosision.rotation);  
+        cameraTransform = Camera.main.transform;
+        yRotation = cameraTransform.eulerAngles.y;
+        transform.eulerAngles = new Vector3(transform.eulerAngles.x, yRotation + 90, transform.eulerAngles.z);  
     }
 }
